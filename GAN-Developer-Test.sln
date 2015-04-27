@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAN-Developer-Test", "GAN-Developer-Test\GAN-Developer-Test.csproj", "{FF395933-4551-4639-8FAF-131D125F2FC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{122E32CB-6461-4829-9082-3F99E40EB255}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{12BEAF0F-F9B4-4BD3-A257-7F9E562B5BAF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,10 @@ Global
 		{FF395933-4551-4639-8FAF-131D125F2FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF395933-4551-4639-8FAF-131D125F2FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF395933-4551-4639-8FAF-131D125F2FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{122E32CB-6461-4829-9082-3F99E40EB255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{122E32CB-6461-4829-9082-3F99E40EB255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{122E32CB-6461-4829-9082-3F99E40EB255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{122E32CB-6461-4829-9082-3F99E40EB255}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

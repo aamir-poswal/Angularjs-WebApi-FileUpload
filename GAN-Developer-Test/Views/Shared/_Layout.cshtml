@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="GANApp">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +38,12 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/app")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/externallib")
+    <script src="@Url.Content("~/Scripts/angular-base64-upload.js")"></script>
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

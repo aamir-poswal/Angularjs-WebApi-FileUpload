@@ -26,6 +26,28 @@ namespace GAN_Developer_Test
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/angular")
+                .Include("~/Scripts/angular.js")
+                .Include("~/Scripts/angular-route.js")
+                .Include("~/Scripts/angular-ui/ui-bootstrap-tpls.js")
+                .Include("~/Scripts/angular-resource.js")
+                .Include("~/Scripts/angular-animate.js")
+                .Include("~/Scripts/angular-sanitize.js")
+                 );
+
+            bundles.Add(new ScriptBundle("~/bundles/app")
+                 .Include("~/app/app.js")
+                 .Include("~/app/controller/fileManagerController.js")
+           );
+
+            bundles.Add(new ScriptBundle("~/bundles/externallib")
+             .Include("~/Scripts/noty/packaged/jquery.noty.packaged.min.js",
+                      "~/Scripts/noty/layouts/topCenter.js",
+                      "~/Scripts/noty/themes/default.js")
+             );
+        
         }
     }
 }

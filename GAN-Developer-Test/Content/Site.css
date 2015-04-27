@@ -1,42 +1,148 @@
-﻿body {
+﻿body
+{
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: white !important;
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
+.body-content
+{
     padding-left: 15px;
     padding-right: 15px;
 }
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
 /* styles for validation helpers */
-.field-validation-error {
+.field-validation-error
+{
     color: #b94a48;
 }
 
-.field-validation-valid {
+.field-validation-valid
+{
     display: none;
 }
 
-input.input-validation-error {
+input.input-validation-error
+{
     border: 1px solid #b94a48;
 }
 
-input[type="checkbox"].input-validation-error {
+input[type="checkbox"].input-validation-error
+{
     border: 0 none;
 }
 
-.validation-summary-errors {
+.validation-summary-errors
+{
     color: #b94a48;
 }
 
-.validation-summary-valid {
+.validation-summary-valid
+{
     display: none;
 }
+
+.nopadding
+{
+    padding: 0px !important;
+}
+
+.mt10
+{
+    margin-top: 10px !important;
+}
+
+.mb10
+{
+    margin-bottom: 10px !important;
+}
+
+.mt20
+{
+    margin-top: 20px !important;
+}
+
+.mb20
+{
+    margin-bottom: 20px !important;
+}
+
+.ml10
+{
+    margin-left: 10px !important;
+}
+
+.mr10
+{
+    margin-right: 10px !important;
+}
+
+.ml20
+{
+    margin-left: 20px !important;
+}
+
+.mr20
+{
+    margin-right: 20px !important;
+}
+
+.no-padding
+{
+    padding: 0px!important;
+}
+
+.no-margin
+{
+    padding: 0px!important;
+}
+.ml5 {
+    margin-left: 5px!important;
+}
+.ml3 {
+    margin-left: 3px!important;
+}
+.mr5 {
+    margin-right: 5px!important;
+}
+.mr3 {
+    margin-right: 3px!important;
+}
+.mt5 {
+    margin-top: 5px!important;
+}
+.mb5 {
+    margin-bottom: 5px!important;
+}
+.white-background {
+    background-color: white!important
+}
+
+.ml13 {
+    margin-left: -13px!important;   
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height:100%;
+    min-width:100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+    height: 0px!important;
+    margin: 0px!important;
+    padding: 6px 12px!important;
+}
+
