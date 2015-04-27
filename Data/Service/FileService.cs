@@ -13,8 +13,8 @@ namespace Data.Service
     {
         GANFile SaveFile(FileGroup group, string fileName, byte[] file,
                                     string contentType);
-
         List<GANFile> GetAll();
+        GANFile DownloadFile(string fileId);
     }
 
     public class FileService : IFileService
@@ -54,11 +54,28 @@ namespace Data.Service
             return ganFile.Save();
 
         }
- 
+
         public List<GANFile> GetAll()
         {
             return GANFile.AsQueryable().ToList();
-        } 
-    
+        }
+
+        public GANFile DownloadFile(string fileId)
+        {
+            var ganFile = GANFile.AsQueryable().FirstOrDefault(q => q.FileId == fileId);
+            byte[] doc = null;
+
+            // Read the file document from GridFS into a memory stream so we can convert it to a byte array.
+            using (MemoryStream output = new MemoryStream())
+            {
+                MongoGridFSFileInfo info = Files.GridFs.FindOneById(new BsonObjectId(new ObjectId(ganFile.FileId)));
+                info.GridFS.Download(output, info);
+                doc = output.ToArray();
+            }
+
+            // Assign the file property of our attachment and return the resulting instance.
+            ganFile.File = doc;
+            return ganFile;
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Web.Http;
 using Data;
 using Data.Service;
@@ -39,7 +40,7 @@ namespace GAN_Developer_Test.Controllers.api
 
             return this.Ok(file.Id);
         }
-    
+
         [HttpGet]
         [Route("api/file/getAll")]
         public IHttpActionResult GetAll()
@@ -51,7 +52,7 @@ namespace GAN_Developer_Test.Controllers.api
                 foreach (var ganFile in files)
                 {
                     var result = new FileViewModel();
-                    result.FileId = ganFile.Id;
+                    result.FileId = ganFile.FileId;
                     result.FileName = ganFile.FileName;
                     result.UploadDate = ganFile.UploadDate;
                     result.FileGroup = ganFile.FileGroup.ToString();
@@ -61,6 +62,29 @@ namespace GAN_Developer_Test.Controllers.api
             }
             return this.Ok(results);
         }
-    
+
+        [HttpGet]
+        [Route("api/file/download/{fileId}")]
+        public System.Net.Http.HttpResponseMessage DownloadFile(string fileId)
+        {
+            if (string.IsNullOrEmpty(fileId))
+            {
+                throw new ArgumentNullException("fileId");
+            }
+            var ganFile = _fileService.DownloadFile(fileId);
+            System.IO.Stream stream = null;
+            stream = new System.IO.MemoryStream(ganFile.File);
+
+            var result = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new System.Net.Http.StreamContent(stream)
+            };
+            result.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+            {
+                FileName = ganFile.FileName
+            };
+            result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+            return result;
+        }
     }
 }

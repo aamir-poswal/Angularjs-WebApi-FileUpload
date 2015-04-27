@@ -46,6 +46,14 @@
             $scope.postModel.fileName = '';
         };
 
+        //download file
+        //$scope.download = function (id) {
+        //    $http({ method: 'GET', url: 'api/file/download/' + id }).success(function (response, status) {
+                
+        //    });
+        //};
+
+
         //mark end of controller
     }]);
 }());

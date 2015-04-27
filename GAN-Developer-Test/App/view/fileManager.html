@@ -1,7 +1,7 @@
 ﻿<!--title-->
 <div class="row mt5 mb10">
     <div class="col-md-12 nopadding">
-        <h4 class="nopadding">Upload File</h4>
+        <h4 class="nopadding">File Manager Implementation</h4>
     </div>
 </div>
 
@@ -43,19 +43,22 @@
         <table class="table table-condensed table-striped table-bordered table-responsive table-hover">
             <thead>
                 <tr>
-                    <th class="col-md-6 col-sm-3 col-xs-3">Name</th>
+                    <th class="col-md-4 col-sm-3 col-xs-3">Name</th>
                     <th class="col-md-3 col-sm-2 col-xs-2">File Group</th>
                     <th class="col-md-2 col-sm-2 col-xs-2">Upload Date</th>
+                    <th class="col-md-2 col-sm-2 col-xs-2"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr data-ng-repeat="file in filesList">
                     <td>{{file.fileName}}
                     </td>
-                    <td>
-                        {{file.fileGroup}}
+                    <td>{{file.fileGroup}}
                     </td>
                     <td>{{file.uploadDate}}</td>
+                    <td>
+                        <a target="_blank" href="api/file/download/{{file.fileId}}">Download</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
