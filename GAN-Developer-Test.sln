@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{12BEAF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{8072D57C-E9F8-4D30-9A2B-10B37E78EBF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{78AA1DAA-A0C2-444A-80D2-C50BB7FADE6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{8072D57C-E9F8-4D30-9A2B-10B37E78EBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8072D57C-E9F8-4D30-9A2B-10B37E78EBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8072D57C-E9F8-4D30-9A2B-10B37E78EBF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78AA1DAA-A0C2-444A-80D2-C50BB7FADE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AA1DAA-A0C2-444A-80D2-C50BB7FADE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AA1DAA-A0C2-444A-80D2-C50BB7FADE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AA1DAA-A0C2-444A-80D2-C50BB7FADE6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
