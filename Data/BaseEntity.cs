@@ -13,7 +13,7 @@ using MongoDB.Driver.Builders;
 using MongoDB.Driver.GeoJsonObjectModel;
 using MongoRepository;
 using Newtonsoft.Json;
-using log4net.Config;
+
 
 namespace Data
 {

@@ -16,26 +16,12 @@
 
             var reader = new FileReader();
             reader.onload = scope.readerOnload;
-
             elem.on('change', function () {
                 if (!elem[0].files.length) {
                     return;
                 }
 
                 var file = elem[0].files[0];
-                if (!file.type.match('image.*')) {
-                    fileObject = {};
-                    fileObject.filetype = '';
-                    fileObject.filename = '';
-                    fileObject.filesize = '';
-                    fileObject.base64 = '';
-                    scope.$apply(function () {
-                        ngModel.$setViewValue(angular.copy(fileObject));
-                    });
-                    noty({ timeout: 3000, layout: 'topRight', text: 'The selected file does not appear to be an image.', type: 'error' });
-                    return;
-                }
-
                 fileObject.filetype = file.type;
                 fileObject.filename = file.name;
                 fileObject.filesize = file.size;

@@ -11,6 +11,11 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.well
+{
+    min-height: 500px!important;
+}
 /* styles for validation helpers */
 .field-validation-error
 {
@@ -96,53 +101,69 @@ input[type="checkbox"].input-validation-error
 {
     padding: 0px!important;
 }
-.ml5 {
+
+.ml5
+{
     margin-left: 5px!important;
 }
-.ml3 {
+
+.ml3
+{
     margin-left: 3px!important;
 }
-.mr5 {
+
+.mr5
+{
     margin-right: 5px!important;
 }
-.mr3 {
+
+.mr3
+{
     margin-right: 3px!important;
 }
-.mt5 {
+
+.mt5
+{
     margin-top: 5px!important;
 }
-.mb5 {
+
+.mb5
+{
     margin-bottom: 5px!important;
 }
-.white-background {
-    background-color: white!important
+
+.white-background
+{
+    background-color: white!important;
 }
 
-.ml13 {
-    margin-left: -13px!important;   
+.ml13
+{
+    margin-left: -13px!important;
 }
 
-.btn-file {
+.btn-file
+{
     position: relative;
     overflow: hidden;
 }
 
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height:100%;
-    min-width:100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
-    height: 0px!important;
-    margin: 0px!important;
-    padding: 6px 12px!important;
-}
-
+    .btn-file input[type=file]
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-height: 100%;
+        min-width: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+        height: 0px!important;
+        margin: 0px!important;
+        padding: 6px 12px!important;
+    }

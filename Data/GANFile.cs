@@ -22,12 +22,10 @@ namespace Data
 
         [BsonRequired]
         public string FileName { get; set; }
-
-        [BsonIgnoreIfNull]
-        public string Description { get; set; }
-
+        
         [BsonRequired]
         public byte[] File { get; set; }
 
+        public string UploadDate { get; set; }
     }
 }

@@ -11,6 +11,5 @@ namespace Data
         Commmunication = 1,
         Paperwork = 2,
         Documentation = 3,
-        Other = 0
     }
 }

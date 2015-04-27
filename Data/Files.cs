@@ -23,7 +23,7 @@ namespace Data
         /// </summary>
         static Files()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["MongoServerSettings_Files"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["MongoServerSettings"].ConnectionString;
             MongoUrl conBuilder = new MongoUrl(connectionString);
             MongoClient client = new MongoClient(connectionString);
             MongoServer server = client.GetServer();

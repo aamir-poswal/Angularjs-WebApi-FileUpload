@@ -1,1 +1,63 @@
-﻿{{title}}
+﻿<!--title-->
+<div class="row mt5 mb10">
+    <div class="col-md-12 nopadding">
+        <h4 class="nopadding">Upload File</h4>
+    </div>
+</div>
+
+<!--upload file section-->
+<div class="row mt20 mb10">
+    <div class="col-md-3 nopadding">
+        <div class="form-group">
+            <label>File Group</label>
+            <select class="form-control" data-ng-model="group">
+                <option value="1">Commmunication</option>
+                <option value="2">Paperwork</option>
+                <option value="3">Documentation</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row mt20 mb10">
+    <div class="form-group">
+        <span class="btn btn-default btn-file">
+            <span>Choose File to Upload</span>
+            <input type="file" style="" ng-model='file' base-sixty-four-input />
+        </span><span class="ml5">{{file.filename}}</span>
+    </div>
+    <div class="form-group mt20">
+        <input type="button" class="btn btn-default btn-primary" value="Upload" data-ng-click="save()" />
+    </div>
+</div>
+
+
+<!--file list title-->
+<div class="row mt20">
+    <div class="col-md-12 nopadding">
+        <h4 class="nopadding">Files List</h4>
+    </div>
+</div>
+<!--file list-->
+<div class="row mt20 mb10">
+    <div class="col-md-12 nopadding">
+        <table class="table table-condensed table-striped table-bordered table-responsive table-hover">
+            <thead>
+                <tr>
+                    <th class="col-md-6 col-sm-3 col-xs-3">Name</th>
+                    <th class="col-md-3 col-sm-2 col-xs-2">File Group</th>
+                    <th class="col-md-2 col-sm-2 col-xs-2">Upload Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="file in filesList">
+                    <td>{{file.fileName}}
+                    </td>
+                    <td>
+                        {{file.fileGroup}}
+                    </td>
+                    <td>{{file.uploadDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

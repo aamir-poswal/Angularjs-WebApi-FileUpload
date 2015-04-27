@@ -11,13 +11,15 @@ namespace Data.Service
 {
     public interface IFileService
     {
-        GANFile CreateFile(FileGroup group, string fileName, byte[] file,
+        GANFile SaveFile(FileGroup group, string fileName, byte[] file,
                                     string contentType);
+
+        List<GANFile> GetAll();
     }
 
     public class FileService : IFileService
     {
-        public GANFile CreateFile(FileGroup group, string fileName, byte[] file, string contentType)
+        public GANFile SaveFile(FileGroup group, string fileName, byte[] file, string contentType)
         {
             if (string.IsNullOrWhiteSpace(fileName))
                 throw new ArgumentNullException("fileName");
@@ -31,6 +33,7 @@ namespace Data.Service
                 File = file,
                 ContentLength = file.Length,
                 ContentType = contentType,
+                UploadDate = DateTime.Now.ToString("g")
             };
 
             var opts = new MongoGridFSCreateOptions()
@@ -51,5 +54,11 @@ namespace Data.Service
             return ganFile.Save();
 
         }
+ 
+        public List<GANFile> GetAll()
+        {
+            return GANFile.AsQueryable().ToList();
+        } 
+    
     }
 }
